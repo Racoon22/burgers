@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('../../fonts/ubuntu/ubuntu-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lifehack-Medium';
+  src: url('../../fonts/lifehack/lifehack-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('../../fonts/ubuntu/ubuntu-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url('../../fonts/ubuntu/ubuntu-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../../fonts/ubuntu/ubuntu.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gagalin-Regular';
+  src: url('../../fonts/gagalin-regular/gagalin-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
