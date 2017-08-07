@@ -1,0 +1,109 @@
+.hero {
+    background: url('../../img/bg/1_slide_bg.jpg') no-repeat; 
+    background-size: cover; 
+    background-position: 50%;
+    position: relative;
+}
+.header {
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.hero__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+   margin-right: auto;
+}
+.header__nav {
+    margin-right: rem(15px);
+}
+.header__list {
+    margin: 0;
+    padding: 0;
+
+}
+.header__item {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    vertical-align: middle;
+    &:after {
+        display: inline-block;
+        content: "";
+        vertical-align: middle;
+        @include circle(5px, white);
+        margin: 12px;
+    }
+    &:last-child:after{
+        display: none;
+    }
+
+   }
+.header__link {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.42;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+    &:hover {
+        text-decoration: underline;
+  }
+ 
+}
+.header__item:hover .header__link {
+    text-decoration: underline;
+}
+.hero__content {        
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    // margin-top: -110px;
+}
+.hero__img {
+    height: 420px;
+    margin-left: 20px;
+}
+.hero__img-pic {
+    max-width: 100%;
+}
+.section__title {
+    @include gagalin();
+   font-size: 72px;
+    text-transform: uppercase;
+    color: #f9b43b;
+}
+.main__content-subtitle {
+    @include lifehack();
+    font-size: 65px;
+    color: #ffffff;
+}
+.main__text  {
+    padding-top: 125px;
+    padding-left: 14px;
+}
+.main__content-subtitle {
+    margin-top: 19px;
+    line-height: 57px;
+    letter-spacing: -2px;
+}
+.arrow {
+    text-align: center; 
+    display: block;
+    margin-bottom: 45px;
+}
+.arrow__link {
+     display: block; 
+}

@@ -1,0 +1,46 @@
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url("../../img/bg/8_slide_bg.jpg") center center no-repeat;
+    background-size: cover;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    background: url("../../img/content/footer.jpg") center center no-repeat;
+    background-size: cover;
+
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+}
+.footer__adress {
+    color: white;
+    margin-bottom: 5px;
+}
+.footer__contact {
+    padding: 6px 0;
+    font-size: 14px;
+}
+.footer__phone {
+    color: $orange;
+    @include ubuntu(Bold);
+}
+.social__item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 18px;
+}
+@each $social in (vk, fb, inst, twitter) {
+    .social__item-#{$social} {
+        background: url("../../img/icons/#{$social}.svg") center center no-repeat;
+        background-size: cover;     
+    }
+     }
+.social__list {
+    padding: 14px 0;
+}

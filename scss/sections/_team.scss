@@ -1,0 +1,76 @@
+.team {
+    background: url('../../img/bg/4_slide_bg.jpg') center center no-repeat; 
+    background-size: cover; 
+    position: relative;
+}
+.team__container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 49%;
+    background: #2f3234;
+    filter: opacity(93%);
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team__content {
+    width: 80%;
+}
+.team__title {
+    font-family: "Gagalin-Regular";
+    text-transform: uppercase;
+    font-size: 72px;
+    line-height: 64px;
+    color: #f9b43b;
+    margin-bottom: 80px;
+    
+}
+.accordion__container {
+    display: none;
+
+}
+.accordion__item {
+    &:hover {
+        .accordion__title {
+            display: block;
+        }
+        .accordion__container {
+            display: flex;
+        }
+
+    }
+}
+.accordion__title {
+    @include gagalin();
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 64px;
+    color: white;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border: rem(9px) solid transparent;
+        border-top-color: $yellow;
+        border-bottom: none;
+        margin-right: 10px;     
+        display: inline-block;
+    }
+}
+.accordion__occupation {
+    font-family: "Ubuntu-Bold";
+    text-transform: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+}
+.accordion__text {
+    font-family: "Ubuntu";
+    text-transform: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ebebeb;
+}

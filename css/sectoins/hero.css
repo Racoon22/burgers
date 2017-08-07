@@ -1,0 +1,138 @@
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
+    background: url('../../img/bg/1_slide_bg.jpg') no-repeat; 
+    background-size: cover; 
+    height: 100vh;
+    margin: 0;
+    min-height: 650px; 
+}
+.arrow {
+    text-align: center; 
+    display: block;
+    margin-bottom: 45px;
+}
+.arrow__link {
+     display: block; 
+}
+.container--main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    padding-top: 12px;
+}
+.header {
+    display: flex; 
+    justify-content: space-between;
+}
+.logo {
+    display: block;
+}
+
+.header__nav {
+     margin-top: -11px;
+}
+.header__list {
+    display: inline-block;
+    text-align: right;
+    padding-right: 5px;
+    text-decoration: none;
+    flex-direction: row;
+    margin-right: 5px;
+
+}
+.header__item {
+   display: inline-block;
+   font-family:  "Ubuntu";
+   font-size: 13px;
+   text-transform: uppercase;
+   margin-top: 25px;
+    color: #ffffff;
+    text-decoration: none;
+   }
+.header__link {
+    text-decoration: none;
+    color: #ffffff;
+}
+.header__item:hover .header__link {
+    text-decoration: underline;
+}
+.header__item::before {
+    text-decoration: none;
+    content: "•";
+    margin: 14px;
+}
+
+.header__item:first-child::before {
+    content: "";
+    margin: 6px;
+}
+.order-button {
+   font-family:  "Ubuntu";
+   font-size: 13px;
+   text-transform: uppercase;
+   margin-top: 25px;
+   color: #ffffff;
+   display: inline-block;
+   padding: 10px 17px;
+   text-decoration: none;
+   background-color: #e45028;
+   border-radius: 3px;
+  }
+.order-button:hover {
+   background-color: #c1401e; 
+}
+.main__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: row; 
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-top: -110px;
+
+}
+.main__content-burger {
+    height: 420px;
+    margin-left: 20px;
+    background: url("../img/content/1_slide_burger.png") center center no-repeat;
+}
+.main__content-title {
+    font-family:  "Gagalin-Regular";
+    font-size: 72px;
+    text-transform: uppercase;
+    color: #f9b43b;
+}
+.main__content-subtitle {
+    font-family:  "Lifehack-Medium";
+    font-size: 65px;
+    color: #ffffff;
+}
+.main__text  {
+    padding-top: 125px;
+    padding-left: 14px;
+}
+.main__content-subtitle {
+    margin-top: 19px;
+    line-height: 57px;
+    letter-spacing: -2px;
+}

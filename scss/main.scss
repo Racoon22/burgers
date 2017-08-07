@@ -1,0 +1,20 @@
+
+//cofnig
+@import "config/_mixins.scss";
+@import "config/_variables.scss";
+
+//layout
+@import "layout/_fonts.scss";
+@import "layout/_base.scss";
+@import "layout/_adjustment.scss";
+
+//sections
+@import "sections/_hero.scss";
+@import "sections/_best.scss";
+@import "sections/_burgers.scss";
+@import "sections/_team.scss";
+@import "sections/_menu.scss";
+@import "sections/_reviews.scss";
+@import "sections/_order.scss";
+@import "sections/_contacts.scss";
+
