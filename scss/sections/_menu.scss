@@ -1,5 +1,5 @@
 .menu {
-    background: url('../../img/bg/5_slide_bg.jpg') no-repeat; 
+    background: url('../img/bg/5_slide_bg.jpg') no-repeat; 
     background-size: cover; 
     background-position: 50%;
     position: relative;
@@ -31,7 +31,7 @@
 }
 @each $menu in (meet, veget, diet) {
     .menu__sutitle-#{$menu} {
-        background: url("../../img/content/#{$menu}.jpg") center center no-repeat;
+        background: url("../img/content/#{$menu}.jpg") center center no-repeat;
         background-size: cover;     
         width: 80px;
         height: 100%;

@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url("../../img/bg/8_slide_bg.jpg") center center no-repeat;
+    background: url("../img/bg/8_slide_bg.jpg") center center no-repeat;
     background-size: cover;
 }
 .footer {
     display: flex;
     justify-content: center;
-    background: url("../../img/content/footer.jpg") center center no-repeat;
+    background: url("../img/content/footer.jpg") center center no-repeat;
     background-size: cover;
 
 }
@@ -37,7 +37,7 @@
 }
 @each $social in (vk, fb, inst, twitter) {
     .social__item-#{$social} {
-        background: url("../../img/icons/#{$social}.svg") center center no-repeat;
+        background: url("../img/icons/#{$social}.svg") center center no-repeat;
         background-size: cover;     
     }
      }
