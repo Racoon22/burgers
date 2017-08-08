@@ -29,7 +29,7 @@
     color: $orange;
     @include ubuntu(Bold);
     &:before {
-        content: url("../../img/icons/phone.svg");
+        content: url("../img/icons/phone.svg");
         margin-right: 10px;
     }
 }

@@ -895,7 +895,7 @@ ul {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 900; }
   .footer__phone:before {
-    content: url("../../img/icons/phone.svg");
+    content: url("../img/icons/phone.svg");
     margin-right: 10px; }
 
 .social__item {
