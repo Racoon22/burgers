@@ -11,13 +11,18 @@
     width: 49%;
     background: #2f3234;
     filter: opacity(93%);
-    padding: 80px;
+    
+    padding-left: 80px;
     display: flex;
-    justify-content: center;
+    flex-direction: none;
+    justify-content: flex-start;
     align-items: center;
 }
 .team__content {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
 }
 .team__title {
     font-family: "Gagalin-Regular";
@@ -25,47 +30,59 @@
     font-size: 72px;
     line-height: 64px;
     color: #f9b43b;
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     
 }
 .accordion__container {
     display: none;
-
 }
+
 .accordion__item {
+    margin-bottom: 20px;
     &:hover {
         .accordion__title {
             display: block;
         }
-        .accordion__container {
-            display: flex;
-        }
+        // .accordion__container {
+        //     display: flex;
+        // }
 
     }
+}
+.active .accordion__container{
+    display: flex;
+        padding-top: 10px;
+    /* padding-bottom: 15px; */
+    padding-left: 15px;
+    margin-bottom: 35px;
 }
 .accordion__title {
     @include gagalin();
     text-transform: uppercase;
-    font-size: 14px;
-    line-height: 64px;
+    font-size: 13px;
+    line-height: 28px;
     color: white;
     &:before {
         content: "";
         width: 0;
         height: 0;
-        border: rem(9px) solid transparent;
+        border: rem(5px) solid transparent;
         border-top-color: $yellow;
         border-bottom: none;
         margin-right: 10px;     
         display: inline-block;
     }
 }
+.accordion__photo {
+    margin-right: 20px;
+}
 .accordion__occupation {
     font-family: "Ubuntu-Bold";
     text-transform: none;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     color: white;
+    margin-bottom: 5px;
 }
 .accordion__text {
     font-family: "Ubuntu";

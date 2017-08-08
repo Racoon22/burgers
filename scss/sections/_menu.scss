@@ -10,12 +10,24 @@
     height: 100%;
 
 }
+.menu__space {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__title--menu {
+    color: white;
+    margin-top: -245px;
+    margin-left: -335px;
+
+}
 .menu__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: stretch;
-    flex: 1;
 }
 .menu__item{
     display: flex;
@@ -33,7 +45,7 @@
     .menu__sutitle-#{$menu} {
         background: url("../img/content/#{$menu}.jpg") center center no-repeat;
         background-size: cover;     
-        width: 80px;
+        width: 78px;
         height: 100%;
       
      }
@@ -62,5 +74,8 @@
     font-size: 14px;
     color: white;
     padding: 30px 60px;
+}
+.footer__phone {
+    
 }
   

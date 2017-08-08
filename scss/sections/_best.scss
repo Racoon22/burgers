@@ -3,8 +3,10 @@
     background-size: cover;  
     background-position: 50%;
 }
+
 .section__title--best {
     color: $dark;
+    margin-top: -110px;
     margin-bottom: 67px;
  
 
@@ -14,7 +16,6 @@
     flex-direction: row;
     justify-content: space-between;;
     align-content: space-between;
-    padding: 0 80px;
     width: 100%;
 }
 

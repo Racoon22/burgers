@@ -28,6 +28,10 @@
 .footer__phone {
     color: $orange;
     @include ubuntu(Bold);
+    &:before {
+        content: url("../../img/icons/phone.svg");
+        margin-right: 10px;
+    }
 }
 .social__item {
     display: inline-block;
