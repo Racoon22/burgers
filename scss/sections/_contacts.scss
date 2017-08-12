@@ -10,41 +10,58 @@
     justify-content: center;
     background: url("../img/content/footer.jpg") center center no-repeat;
     background-size: cover;
+ 
 
 }
 .footer__container {
     display: flex;
     justify-content: space-between;
-    width: 940px;
+    align-items: center;
+    width: rem(940px);
+    @include phones {
+    width: rem(480px);
+    flex-direction: column;
+    }
+    
 }
 .footer__adress {
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 }
 .footer__contact {
-    padding: 6px 0;
-    font-size: 14px;
+    padding: rem(6px);
+    font-size: rem(14px);
+          @include tablets {
+ padding: rem(13px);
+          }
+    @include phones {
+    width: rem(480px);
+    text-align: center;
+    }
 }
 .footer__phone {
     color: $orange;
     @include ubuntu(Bold);
     &:before {
         content: url("../img/icons/phone.svg");
-        margin-right: 10px;
+        margin-right: rem(10px);
     }
 }
 .social__item {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: 18px;
+    width: rem(20px);
+    height: rem(20px);
+    margin-left: rem(18px);    
+          @include tablets {
+ padding: rem(12px);
+          }
 }
 @each $social in (vk, fb, inst, twitter) {
     .social__item-#{$social} {
         background: url("../img/icons/#{$social}.svg") center center no-repeat;
         background-size: cover;     
     }
-     }
+}
 .social__list {
-    padding: 14px 0;
+    padding: rem(14px) 0;
 }

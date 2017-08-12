@@ -4,9 +4,30 @@
     background-position: 50%;
     position: relative;
 }
+.form__container {
+        @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px 0;
+        }
+    @include phones {
+    padding-top: 45px;
+    }
+}
 .form {
     display: flex;   
     color: white;
+    @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;   
+    padding: 0 130px; 
+    }
+    @include phones {
+    padding: rem(0px);
+    }
 }
 .form__label {
     display: block;
@@ -15,26 +36,38 @@
 .form__label-title {
     @include ubuntu($style: light);
     width: 100%;
-    font-size: 14px;
+    font-size: rem(14px);
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
+    text-align: left
 }
 .form__input {
     @include ubuntu($style: light);
     width: 100%;
-    font-size: 14px;
+    font-size: rem(14px);
     background: white;
-    border-radius: 7px;
+    border-radius: rem(7px);
     border: 0;
-    padding: 10px;
+    padding: rem(10px);
 }
 .section__title-order{
-    margin-top: -100px;
-    margin-bottom: 65px;
+    margin-top: rem(-100px);
+    margin-bottom: rem(65px);
+           @include tablets {
+                margin-top: 0;
+                margin-bottom: rem(75px);
+           }
+    @include phones {
+    padding: rem(0px);
+    font-size: 50px;
+    margin-bottom: rem(30px);
+    }
 }
+
+
 .form__row {
     display: flex;   
-    margin-top: 14px;
+    margin-top: rem(14px);
     &:first-child {
         margin-top: 0;
     }
@@ -42,7 +75,7 @@
 .form__cell {
     display: block;
     flex: 1;
-    margin-left: 20px;
+    margin-left: rem(20px);
     &:first-child {
         margin-left: 0;
     }
@@ -50,36 +83,40 @@
 .form__column {
     width: 50%;
     padding: 0;
-    margin-left: rem(20px);
-    &:first-child {
-         margin-left: 0;
-    }
+    margin-right: rem(20px);
+      @include tablets {
+  width: 100%;
+  margin-bottom: 20px;
+      }
 }
 .form__textarea {
     resize: none;
-    height: rem(110px);
+    height: rem(120px);
 }
 .form__row-control {
-    margin-top: 10px;
+    margin-top: rem(10px);
+        @include phones {
+    justify-content: center;
+        }
 }
 .form__control {
     display: flex;
     justify-content: flex-start;
     flex: 1;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 }
-.from__radio {
+.form__radio {
     display: inline-flex;
     align-items: center;
-    margin-right: 15px;
+    margin-right: rem(15px);
    }
-.from__radio-elem {
+.form__radio-elem {
     display: none;
 }
-.from__radio-fake {
+.form__radio-fake {
     display: inline-block;
-    width: 17px;
-    height: 17px;
+    width: rem(17px);
+    height: rem(17px);
     border-radius: 50%;
     position: relative;
     background:white;
@@ -88,8 +125,8 @@
     &:after {
     content: "";
     display: none;
-    width: 7px;
-    height: 7px;
+    width: rem(7px);
+    height: rem(7px);
     background: $darker-orange;
     border-radius: 50%;
     position: absolute;
@@ -98,49 +135,60 @@
     transform: translate(70%, 70%);
 }
 }
-.from__radio-elem:checked + .from__radio-fake:after {
+.none {
+        @include phones {
+    display: none;
+        }
+}
+.form__radio-elem:checked + .form__radio-fake:after {
     display: block;  
 }
-.from__checkbox {
-    display: inline-flex;
+.form__checkbox {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex: 1;
+    margin-right: rem(15px);
+          @include tablets {
+    flex: 0;
+    margin-bottom: 20px;
+          }
 }
-.from__control-text {
-    font-size: 14px;
-    margin-left: 10px;
+.form__control-text {
+    display: block;
+    font-size: rem(14px);
+    margin-left: rem(10px);
+    
 }
-.from__checkbox-elem {
+.form__checkbox-elem {
     display: none;
 }
 
-.from__checkbox-fake {
+.form__checkbox-fake {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: rem(15px);
+    height: rem(15px);
     position: relative;
     background:white;
     vertical-align: middle;
     cursor: pointer;
     &:after {
-    display: none;
     content: "";
-    width: 6px;
-    height: 10px;
-    border: 3px solid $darker-orange;
+    width: rem(6px);
+    height: rem(10px);
+    border: rem(3px) solid $dark;
     border-top: none;
     border-left: none;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(80%, 15%) rotate(45deg);
+    transform: translate(60%, 10%) rotate(45deg);
     }  
     &:checked:after{
     display: block;
 }
 }
-.from__checkbox-elem:checked + .from__checkbox-fake:after {
-    display: block;  
+.form__checkbox-elem:checked + .form__checkbox-fake:after {
+    border-color:  $darker-orange;
 }
 .form__buttons {
     display: inline-flex;
@@ -148,9 +196,9 @@
 }
 .form_link-clear {
     text-decoration: none;
-    font-size: 13px;
+    font-size: rem(13px);
     font-weight: 500;
     line-height: 1.42;
     color: white;
-    margin-left: 15px;
+    margin-left: rem(15px);
 }

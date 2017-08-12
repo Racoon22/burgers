@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -27,7 +27,14 @@
                                 <li class="header__item"><a href="" class="header__link">Контакты</a></li>
                             </ul>
                         </div>
-                        <div class="order-button"><a href="#" class="order-link">Заказать</a></div>
+                        <div class="order-button">
+                            <a href="#" class="order-link">Заказать</a>
+                        </div>
+                        <div class="header__menu">
+                            <a href="#" class="header__menu-link">
+                                <img src="img/icons/small_menu.png" alt="" class="header__menu-img">
+                            </a>
+                        </div>
                     </header>
                     <div class="hero__content">
                         <div class="hero__img">
@@ -44,33 +51,37 @@
                 </div>
             </section>
             <section id="best" class="section best">
-                <div class="container">
+                <div class="container best__container">
                     <div class="section__title section__title--best">Мы лучшие</div>
                     <ul class="best__list">
                         <li class="best__item">
                             <div class="best__img-block">
                                 <img src="img/icons/meat.svg" alt="" class="best__img">
                             </div>
-                            <span class="best__item-title">100%свежее мясо</span>
-                            <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                            <div class="best-item-text">
+                                <span class="best__item-title">100%свежее мясо</span>
+                                <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                            </div>
 
                         </li>
                         <li class="best__item">
                             <div class="best__img-block">
                                 <img src="img/icons/hand.svg" alt="" class="best__img">
                             </div>
-                            <span class="best__item-title">Ручная  сборка</span>
-                            <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие
-                                притягивает сюжетный реформаторский пафос.</p>
-
+                            <div class="best-item-text">
+                                <span class="best__item-title">Ручная  сборка</span>
+                                <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие
+                                    притягивает сюжетный реформаторский пафос.</p>
+                            </div>
                         </li>
                         <li class="best__item">
                             <div class="best__img-block">
                                 <img src="img/icons/natural.svg" alt="" class="best__img">
                             </div>
-                            <span class="best__item-title">Натуральные ингредиенты</span>
-                            <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
-
+                            <div class="best-item-text">
+                                <span class="best__item-title">Натуральные ингредиенты</span>
+                                <p class="best__description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -86,7 +97,9 @@
                                 <li class="accordion__item">
                                     <div class="accordion__title">Дэниэл Редклиф</div>
                                     <div class="accordion__container">
-                                        <img src="img/content/2_accordion2.png" alt="" class="accordion__photo">
+                                        <div class="accordion__photo-container">
+                                            <img src="img/content/2_accordion2.png" alt="" class="accordion__photo">
+                                        </div>
                                         <div class="accordion__info">
                                             <div class="accordion__occupation">Оператор</div>
                                             <div class="accordion__text">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -97,7 +110,9 @@
                                 <li class="accordion__item active">
                                     <div class="accordion__title">Ричард Джеймс</div>
                                     <div class="accordion__container">
-                                        <img src="img/content/2_accordion2.png" alt="" class="accordion__photo">
+                                        <div class="accordion__photo-container">
+                                            <img src="img/content/2_accordion2.png" alt="" class="accordion__photo">
+                                        </div>
                                         <div class="accordion__info">
                                             <div class="accordion__occupation">Оператор</div>
                                             <div class="accordion__text">С радостью поможет подобрать идеальный бургер и оформить заказ.
@@ -199,7 +214,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background: url('img/content/2_reviews.jpg') no-repeat; background-size: cover; background-position: center">
@@ -207,7 +223,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background: url('img/content/3_reviews.jpg') no-repeat; background-size: cover; background-position: center">
@@ -215,7 +232,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background: url('img/content/4_reviews.jpg') no-repeat; background-size: cover; background-position: center">
@@ -223,7 +241,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background: url('img/content/5_reviews.jpg') no-repeat; background-size: cover; background-position: center">
@@ -231,7 +250,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                     <li class="reviews__item" style="background: url('img/content/6_reviews.jpg') no-repeat; background-size: cover; background-position: center">
@@ -239,7 +259,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
 
                     </li>
@@ -248,7 +269,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
 
                     </li>
@@ -257,7 +279,8 @@
                             <div class="reviews__title">Константин Спилберг</div>
                             <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал,
                                 что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                            <div class="reviews__button">Подробнее</div>
+                            <div class="reviews__button reviews__button-big">Подробнее</div>
+                            <div class="reviews__button reviews__button-small">Читать отзыв</div>
                         </div>
                     </li>
                 </ul>
@@ -309,7 +332,7 @@
                                         <input type="text" class="form__input">
                                     </label>
                                     </div>
-                                    <div class="form__cell">
+                                    <div class="form__cell none">
                                         <label class="form__label"> 
                                         <div class="form__label-title">Этаж</div>    
                                         <input type="text" class="form__input">
@@ -327,27 +350,27 @@
                                     </div>
                                 </div>
                                 <div class="form__row form__row-control">
-                                    <div class="form__control ">
-                                        <label class="from__radio">
-                                        <input type="radio" name="cash" class="from__radio-elem" checked>
-                                        <div class="from__radio-fake"></div>
-                                        <div class="from__control-text">Потребуется сдача</div>
+                                   
+                                        <label class="form__radio">
+                                        <input type="radio" name="cash" class="form__radio-elem" checked>
+                                        <div class="form__radio-fake"></div>
+                                        <div class="form__control-text">Потребуется сдача</div>
                                     </label>
-                                        <label class="from__radio">
-                                        <input type="radio" name="cash" class="from__radio-elem">
-                                        <div class="from__radio-fake"></div>
-                                        <div class="from__control-text">Оплата по карте</div>
+                                        <label class="form__radio">
+                                        <input type="radio" name="cash" class="form__radio-elem">
+                                        <div class="form__radio-fake"></div>
+                                        <div class="form__control-text">Оплата по карте</div>
                                     </label>
-                                    </div>
+                                  
                                 </div>
                                 <div class="form__row form__row-control">
-                                    <div class="form__control">
-                                        <label class="from__checkbox">
-                                        <input class="from__checkbox-elem" type="checkbox" name="callback"  checked>
-                                        <div class="from__checkbox-fake"></div>
-                                        <div class="from__control-text">Не перезванивать</div>
+                               
+                                        <label class="form__checkbox">
+                                        <input class="form__checkbox-elem" type="checkbox" name="callback"  checked>
+                                        <div class="form__checkbox-fake"></div>
+                                        <div class="form__control-text">Не перезванивать</div>
                                     </label>
-                                    </div>
+                                   
 
                                 </div>
                                 <div class="form__row form__row-control">
@@ -370,7 +393,8 @@
                             <div class="footer__phone">+7 (812) 377-13-77</div>
                         </div>
                         <ul class="social__list">
-                            <li class="social__item social__item-vk"></li>
+                            <li class="social__item social__item-vk">
+                              </li>
                             <li class="social__item social__item-fb"></li>
                             <li class="social__item social__item-inst"></li>
                             <li class="social__item social__item-twitter"></li>
@@ -382,14 +406,14 @@
     </div>
     <nav class="scrol-nav">
         <ul class="scrol-nav__list">
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
-            <li class="scrol-nav__item"></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
+            <li class="scrol-nav__item"><a href="#" class="scrol-nav__link"></a></li>
         </ul>
     </nav>
 

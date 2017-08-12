@@ -1,7 +1,9 @@
 
 //cofnig
-@import "config/_mixins.scss";
 @import "config/_variables.scss";
+@import "config/_media.scss";
+@import "config/_mixins.scss";
+
 
 //layout
 @import "layout/_fonts.scss";
@@ -17,4 +19,5 @@
 @import "sections/_reviews.scss";
 @import "sections/_order.scss";
 @import "sections/_contacts.scss";
+@import "sections/_scroll.scss";
 

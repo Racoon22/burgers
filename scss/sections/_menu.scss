@@ -11,16 +11,23 @@
 
 }
 .menu__space {
-    display: flex;
     flex: 1;
-    justify-content: center;
-    align-items: center;
+
 }
 
 .section__title--menu {
+    position: absolute;
     color: white;
-    margin-top: -245px;
-    margin-left: -335px;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 25%);
+              @include tablets {
+ transform: translate(10%, 70%);
+              }
+           @include phones {
+   transform: translate(50%, 70%);
+   font-size: 45px;
+    }
 
 }
 .menu__list {
@@ -45,34 +52,44 @@
     .menu__sutitle-#{$menu} {
         background: url("../img/content/#{$menu}.jpg") center center no-repeat;
         background-size: cover;     
-        width: 78px;
+        width: rem(78px);
         height: 100%;
+        @include phones {
+        width: rem(85px);
+        }
       
      }
 }
 .menu__link {
-    display: block;
+    display: flex;
     @include gagalin();
-    font-size: 40px;
+    font-size: rem(40px);
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    transform: translate(-36%, 525%) rotate(-90deg);
+    text-align: center;
+    transform: translate(-36%) rotate(-90deg);
     white-space: nowrap;
     z-index: 100;
     text-decoration: none;
     color: white;
+        @include tablets {
+            top: 80%;
+        }
+        @include phones {
+   top: 70%;
+        }
 } 
 .menu__desc {
     display: none;
-    width: 540px;
+    width: rem(540px);
     background: #141414;
     filter: opacity(93%);
 } 
 .menu__text {
     @include ubuntu();
-    font-size: 14px;
+    font-size: rem(14px);
     color: white;
-    padding: 30px 60px;
+    padding: rem(30px) rem(60px);
 }
   

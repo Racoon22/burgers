@@ -1,0 +1,28 @@
+.scrol-nav__list {
+  position: fixed;
+  z-index: 1000;
+  right: 50px;
+  top: 98px; }
+
+.scrol-nav__item {
+  border-radius: 50%;
+  background-color: white;
+  width: 6px;
+  height: 6px;
+  margin-bottom: 15px;
+  color: white;
+  position: relative; }
+
+.scrol-nav__item:before {
+  display: none;
+  content: "";
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: -6px;
+  top: -6px; }
+
+.scrol-nav__item:hover:before {
+  display: block; }
