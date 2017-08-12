@@ -14,6 +14,54 @@
                 min-height: 1025px;
            }
            @include phones {
-   min-height: 800px;
+        min-height: 800px;
     }
+}
+.burgers__container {
+    display: flex;
+    min-width: 940px;
+    // flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.arrow__burgers-left {
+    transform: rotate(90deg);
+}
+.arrow__burgers-right {
+    transform: rotate(270deg);
+}
+.burgers__img {
+    width: 480px;
+    height: 300px;
+}
+.burgers__content {
+    display: flex;
+}
+.burgers__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.burgers__title--burger {
+    color: white;
+    width: 380px;
+    line-height: 60px;
+}
+.burgers__description {
+    @include ubuntu();
+    color: white;
+    width: 470px;
+    font-size: 14px;
+}
+.burgers__price {
+    @include gagalin();
+    font-size: rem(72px);
+    color: $darker-orange;
+    width: 470px;
+}
+.burgers__currency {
+     @include gagalin();
+    font-size: rem(30px);
+    color: $darker-orange;
+    width: 470px;
 }

@@ -468,6 +468,76 @@ ul {
     .burgers {
       min-height: 800px; } }
 
+.burgers__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 940px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.arrow__burgers-left {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.arrow__burgers-right {
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.burgers__img {
+  width: 480px;
+  height: 300px; }
+
+.burgers__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.burgers__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.burgers__title--burger {
+  color: white;
+  width: 380px;
+  line-height: 60px; }
+
+.burgers__description {
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  color: white;
+  width: 470px;
+  font-size: 14px; }
+
+.burgers__price {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 4.5rem;
+  color: #c1401e;
+  width: 470px; }
+
+.burgers__currency {
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif;
+  font-size: 1.875rem;
+  color: #c1401e;
+  width: 470px; }
+
 .team {
   background: url("../img/bg/4_slide_bg.jpg") center center no-repeat;
   background-size: cover;
@@ -1259,22 +1329,6 @@ ul {
   @media screen and (max-width: 768px) {
     .social__item {
       padding: 0.75rem; } }
-
-.social__item-vk {
-  background: url("../img/icons/vk.svg") center center no-repeat;
-  background-size: cover; }
-
-.social__item-fb {
-  background: url("../img/icons/fb.svg") center center no-repeat;
-  background-size: cover; }
-
-.social__item-inst {
-  background: url("../img/icons/inst.svg") center center no-repeat;
-  background-size: cover; }
-
-.social__item-twitter {
-  background: url("../img/icons/twitter.svg") center center no-repeat;
-  background-size: cover; }
 
 .social__list {
   padding: 0.875rem 0; }

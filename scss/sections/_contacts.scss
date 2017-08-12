@@ -56,12 +56,12 @@
  padding: rem(12px);
           }
 }
-@each $social in (vk, fb, inst, twitter) {
-    .social__item-#{$social} {
-        background: url("../img/icons/#{$social}.svg") center center no-repeat;
-        background-size: cover;     
-    }
-}
+// @each $social in (vk, fb, inst, twitter) {
+//     .social__item-#{$social} {
+//         background: url("../img/icons/#{$social}.svg") center center no-repeat;
+//         background-size: cover;     
+//     }
+// }
 .social__list {
     padding: rem(14px) 0;
 }

@@ -128,7 +128,7 @@
    font-size: rem(72px);
     text-transform: uppercase;
     color: #f9b43b;
-            @include tablets {
+    @include tablets {
     text-align: center;
     margin-top: 20px;
     }
