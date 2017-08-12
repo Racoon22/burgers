@@ -52,8 +52,8 @@
     width: rem(20px);
     height: rem(20px);
     margin-left: rem(18px);    
-          @include tablets {
- padding: rem(12px);
+    @include tablets {
+    padding: rem(12px);
           }
 }
 // @each $social in (vk, fb, inst, twitter) {
