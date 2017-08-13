@@ -32,48 +32,92 @@
 }
 .burgers__column-left {
      position: relative;
+    padding: 80px 0;
 }
 .burgers__composition {
     position: absolute;
+    display: flex;
     top: 0;
     left: 0;
+ }
+.burgers__product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(90px, 0);
+  display: none;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.902;
+  padding: 20px;
+}
+.burgers__product-name {
+     @include ubuntu(bold);
+     padding: 0 20px;
+}
+.burgers__product-weight {
+    text-align: right;
+    padding-left: 20px;
+    min-width: 70px;
+}
+
+.burgers__composition-batton {
     width: 90px;
     height: 90px;
     background-color: #f08c33;
     border-radius: 5px;
- }
+    text-align: center;
+    padding-top: 10px;
+}
 .burgers__composition-title {
     @include gagalin();
     font-size: 14px;
-    position: absolute;
-    top: 0;
-    left: 0; 
-    transform: translate(50%, 350%);
     color: white;
 }
 .burgers__composition-img {
-    position: absolute;
-    top: 0;
-    left: 0; 
-    transform: translate(7%, -45%);
+    width: 46px;
+    height: 45px;
 }
-// .burgers__calories-title {
-//     @include gagalin();
-//     font-size: 14px;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0; 
-//     transform: translate(50%, -3500%);
-//     color: white; 
-// }
+.burgers__composition:hover  .burgers__product {
+    display: block;
+}
+.burgers__composition:hover  .burgers__composition-batton {
+    background-color: #e35028;;
+}
+
+.burgers__kkal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    opacity: 0.4;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+ }
+.burgers__kkal-title {
+    @include gagalin();
+    font-size: 14px;
+    margin-top: 10px;
+    color: white;
+}
+.burgers__kkal-amount {
+    @include gagalin();
+    font-size: 14px;
+    margin-top: -30px;
+    color: white;
+}
+.burgers__kkal-img {
+    width: 60px;
+    height: 60px;
+}
 .burgers__img {
-      margin-top: 80px;
     width: 500px;
 }
 .burgers__content {
     display: flex;
     align-items: flex-start;
-    margin-top: rem(-70px);
 }
 .burgers__column-right {
     width: 470px;
@@ -99,13 +143,13 @@
 .burgers__price {
     @include gagalin();
     font-size: rem(72px);
-    color: $darker-orange;
+    color: #e55e2c;
     margin-right: 10px;
 }
 .burgers__currency {
-     @include gagalin();
+    @include gagalin();
     font-size: rem(30px);
-    color: $darker-orange;
+    color: #e55e2c;
     margin-right: 20px;
 
 }
