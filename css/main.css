@@ -1542,7 +1542,8 @@ ul {
   right: 50px;
   top: 98px; }
 
-.scrol-nav__item {
+.scrol-nav__link {
+  display: block;
   border-radius: 50%;
   background-color: white;
   width: 6px;
@@ -1551,7 +1552,7 @@ ul {
   color: white;
   position: relative; }
 
-.scrol-nav__item:before {
+.scrol-nav__link:before {
   display: none;
   content: "";
   border: 1px solid white;
@@ -1559,10 +1560,10 @@ ul {
   width: 16px;
   height: 16px;
   position: absolute;
-  left: -6px;
-  top: -6px; }
+  left: -80%;
+  top: -80%; }
 
-.scrol-nav__item:hover:before {
+.scrol-nav__link:hover:before {
   display: block; }
 
 .icon-arrow-scroll {
