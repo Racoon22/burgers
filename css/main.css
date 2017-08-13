@@ -1532,6 +1532,10 @@ ul {
 .social__list {
   padding: 0.875rem 0; }
 
+.social__icon {
+  width: 20px;
+  height: 20px; }
+
 .scrol-nav__list {
   position: fixed;
   z-index: 1000;
