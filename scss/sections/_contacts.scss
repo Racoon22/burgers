@@ -18,6 +18,10 @@
     justify-content: space-between;
     align-items: center;
     width: rem(940px);
+    padding: 0 10px;
+    @include tablets {
+    max-width: 768px;
+    }
     @include phones {
     width: rem(480px);
     flex-direction: column;
@@ -32,7 +36,7 @@
     padding: rem(6px);
     font-size: rem(14px);
           @include tablets {
- padding: rem(13px);
+ padding-bottom: rem(5px);
           }
     @include phones {
     width: rem(480px);
@@ -52,12 +56,22 @@
     width: rem(20px);
     height: rem(20px);
     margin-left: rem(18px);    
+    &:hover .icon-social {
+    opacity: 1;    
+    }
+    &:first-child {
+    margin-left: 0;     
+    }
     @include tablets {
-    padding: rem(12px);
-          }
+    padding-left: rem(12px);
+    }
+
 }
 .social__list {
-    padding: rem(14px) 0;
+    padding-top: rem(14px);
+        @include tablets {
+       padding: 0;
+    }
 }
 .social__icon {
     width: 20px;

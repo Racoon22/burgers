@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 100px 0;
         }
     @include phones {
     padding-top: 45px;
@@ -49,6 +49,12 @@
     border-radius: rem(7px);
     border: 0;
     padding: rem(10px);
+    border: 2px solid transparent;
+    &:focus {
+    border: 2px solid #f9b43b;
+    outline: none;
+    }
+    
 }
 .section__title-order{
     margin-top: rem(-100px);
