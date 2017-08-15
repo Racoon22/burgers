@@ -28,7 +28,8 @@
 
 }
 .header__logo {
-   margin-right: auto;
+    margin-right: auto;
+    z-index: 300;
 }
 .header__nav {
     margin-right: rem(15px);
@@ -82,6 +83,9 @@
     display: none;
            @include tablets {
    display: block;
+   background: url("../img/icons/small_menu.png") center center no-repeat;
+   width: 25px;
+   height: 25px;
    margin-top: 5px;
    margin-left: 30px;
 
@@ -104,7 +108,6 @@
     }
 }
 .hero__img {
-    
   text-align: center;
       @include tablets {
         margin: 0;

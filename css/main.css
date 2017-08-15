@@ -191,7 +191,8 @@ ul {
       padding-top: 0; } }
 
 .header__logo {
-  margin-right: auto; }
+  margin-right: auto;
+  z-index: 300; }
 
 .header__nav {
   margin-right: 0.9375rem; }
@@ -245,6 +246,9 @@ ul {
   @media screen and (max-width: 768px) {
     .header__menu-link {
       display: block;
+      background: url("../img/icons/small_menu.png") center center no-repeat;
+      width: 25px;
+      height: 25px;
       margin-top: 5px;
       margin-left: 30px; } }
 
@@ -1542,7 +1546,7 @@ ul {
       padding-left: 0.75rem; } }
 
 .social__list {
-  padding-top: 0.875rem; }
+  padding: 0.75rem; }
   @media screen and (max-width: 768px) {
     .social__list {
       padding: 0; } }
@@ -1668,3 +1672,67 @@ ul {
   width: 30px;
   height: 30px;
   opacity: 0.5; }
+
+.fullscreen-menu {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 1025px;
+  background-color: #2f3234;
+  z-index: 200;
+  opacity: 0.9; }
+
+.fullscreen-menu__link {
+  display: block;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  text-align: center; }
+  .fullscreen-menu__link:hover {
+    text-decoration: underline; }
+  .fullscreen-menu__link:before {
+    content: "";
+    border-radius: 50%;
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    top: -75%; }
+
+.fullscreen-menu__item {
+  margin-bottom: 60px; }
+
+.fullscreen-menu__item:first-child .fullscreen-menu__link:before {
+  display: none; }
+
+.close-btn {
+  background: url("/img/icons/close-btn-grey.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer; }
+
+.active-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
