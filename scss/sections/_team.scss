@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: none;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     @include tablets {
     width: 100%;
     padding-left: 0;
@@ -33,9 +33,9 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    margin-top: rem(-30px);
-       @include tablets {
-           margin-top: 0;
+    margin-top: rem(70px);
+    @include tablets {
+    margin-top: 0;
     justify-content: center;
     align-items: center;
     
@@ -69,11 +69,6 @@
 }
 .accordion__item {
     margin-bottom: rem(20px);
-    &:hover {
-        .accordion__title {
-            display: block;
-        }
-    }
 }
 .active .accordion__container{
     display: flex;
@@ -90,8 +85,9 @@
 }
 .active .accordion__title {
     color: $yellow;
-    
-
+}
+.active .accordion__title:before {
+    transform: rotate(180deg);
 }
 .accordion__title {
     @include gagalin();

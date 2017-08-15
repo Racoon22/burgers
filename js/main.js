@@ -16,6 +16,25 @@ $(document).ready(function () {
         fullScreenMenu.removeClass('active-menu');
         console.log(fullScreenMenu);
     }
+    )
+
+    $('.accordion__item').on('click', function (e) {
+
+        var item = $(e.target).closest('.accordion__item'),
+            items = item.siblings('.accordion__item'),
+            itemHeight = item.outerHeight();
+
+        if (!item.hasClass("active")) {
+            items.removeClass('active');
+
+            item.addClass('active')
+
+        } else {
+            item.removeClass('active')
+        }
+
+
+    }
 
 
     )
