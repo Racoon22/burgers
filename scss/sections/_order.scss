@@ -8,7 +8,7 @@
         @include tablets {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding-top: 100px 0;
         }
@@ -23,7 +23,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;   
-    padding: 0 130px; 
+    max-width: 475px; 
+    width: 100%;
     }
     @include phones {
     padding: rem(0px);
@@ -121,8 +122,8 @@
 }
 .form__radio-fake {
     display: inline-block;
-    width: rem(17px);
-    height: rem(17px);
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     position: relative;
     background:white;
@@ -131,10 +132,10 @@
     &:after {
     content: "";
     display: none;
-    width: rem(7px);
-    height: rem(7px);
+    width: 7px;
+    height: 7px;
     background: $darker-orange;
-    border-radius: 50%;
+    border-radius: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -142,7 +143,7 @@
 }
 }
 .none {
-        @include phones {
+    @include phones {
     display: none;
         }
 }
@@ -155,7 +156,6 @@
     align-items: center;
     margin-right: rem(15px);
           @include tablets {
-    flex: 0;
     margin-bottom: 20px;
           }
 }
@@ -178,6 +178,7 @@
     vertical-align: middle;
     cursor: pointer;
     &:after {
+    display: none;
     content: "";
     width: rem(6px);
     height: rem(10px);
@@ -187,13 +188,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(60%, 10%) rotate(45deg);
+    transform: translate(80%, 15%) rotate(45deg);
     }  
     &:checked:after{
-    display: block;
+  
 }
 }
 .form__checkbox-elem:checked + .form__checkbox-fake:after {
+    display: block;
     border-color:  $darker-orange;
 }
 .form__buttons {
@@ -207,4 +209,14 @@
     line-height: 1.42;
     color: white;
     margin-left: rem(15px);
+}
+.reset {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    margin-left: 20px;
 }

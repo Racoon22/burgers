@@ -18,25 +18,31 @@ $(document).ready(function () {
     }
     )
 
-    $('.accordion__item').on('click', function (e) {
-
+    $('.accordion__link').on('click', function (e) {
+        e.preventDefault()
         var item = $(e.target).closest('.accordion__item'),
             items = item.siblings('.accordion__item'),
             itemHeight = item.outerHeight();
 
         if (!item.hasClass("active")) {
             items.removeClass('active');
-
             item.addClass('active')
-
+        } else {
+            item.removeClass('active')
+        }
+    });
+    $('.menu__item').on('click', function (e) {
+        e.preventDefault()
+        var item = $(e.target).closest('.menu__item'),
+            items = item.siblings('.menu__item'),
+            itemHeight = item.outerHeight();
+        if (!item.hasClass("active")) {
+            items.removeClass('active');
+            item.addClass('active')
         } else {
             item.removeClass('active')
         }
 
-
-    }
-
-
-    )
+    });
 }
 )

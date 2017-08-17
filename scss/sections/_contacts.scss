@@ -33,7 +33,7 @@
     margin-bottom: rem(5px);
 }
 .footer__contact {
-    padding: rem(6px);
+
     font-size: rem(14px);
           @include tablets {
  padding-bottom: rem(5px);
@@ -43,19 +43,20 @@
     text-align: center;
     }
 }
-.footer__phone {
+.footer__phone-link {
     color: $orange;
     @include ubuntu(Bold);
-    &:before {
-        content: url("../img/icons/phone.svg");
-        margin-right: rem(10px);
-    }
+    outline: none;
+    text-decoration: none;
+}
+.footer__phone-number {
+    margin-left: 5px;
 }
 .social__item {
     display: inline-block;
-    width: rem(20px);
-    height: rem(20px);
-    margin-left: rem(18px);    
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;    
     &:hover .icon-social {
     opacity: 1;    
     }
@@ -72,6 +73,9 @@
         @include tablets {
        padding: 0;
     }
+}
+.social__link {
+    display: inline-block;
 }
 .social__icon {
     width: 20px;

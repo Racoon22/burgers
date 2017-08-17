@@ -8,7 +8,7 @@
 
 .maincontent {
   height: 100%;
-  min-height: rem(650px);
+  // min-height: rem(650px);
 }
 
 .container {
@@ -20,7 +20,7 @@
   flex-direction: column;
 
   max-width: 940px;
-    width: 98%;
+    width: 92%;
      @include tablets {
    max-width: 768px;
     }
@@ -53,6 +53,8 @@
   line-height: 1.42;
   text-transform: uppercase;
   transition: .5s;
+  border: none;
+  cursor: pointer;
   &:hover {
     background-color: darken($orange, 7%);
   }

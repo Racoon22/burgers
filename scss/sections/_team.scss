@@ -19,9 +19,9 @@
     @include tablets {
     width: 100%;
     padding-left: 0;
-    padding-top: 115px;
+    padding-top: 0;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
            @include phones {
     padding-top: 52px;
@@ -83,7 +83,11 @@
             margin-bottom: rem(18px);;
         }
 }
-.active .accordion__title {
+.accordion__link {
+    text-decoration: none;
+    color: white;
+}
+.active .accordion__link {
     color: $yellow;
 }
 .active .accordion__title:before {
@@ -113,19 +117,22 @@
 }
 .accordion__photo-container {
         text-align: center;
+            margin-right: rem(20px);
 }
 .accordion__photo {
-
     text-align: center;
     height: 100px;
     width: 100px;
-    margin-right: rem(20px);
         @include tablets {
          margin-right: 0;
         }
 }
 .accordion__info {
     padding-top: 12px;
+    max-width: 235px;
+    @include tablets {
+    max-width: 370px;
+        }
 }
 .accordion__occupation {
     font-family: "Ubuntu-Bold";

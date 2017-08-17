@@ -12,7 +12,6 @@
 }
 .menu__space {
     flex: 1;
-
 }
 
 .section__title--menu {
@@ -21,12 +20,12 @@
     top: 0;
     left: 0;
     transform: translate(50%, 25%);
-              @include tablets {
- transform: translate(10%, 70%);
+    @include tablets {
+    transform: translate(10%, 70%);
               }
-           @include phones {
-   transform: translate(50%, 70%);
-   font-size: 45px;
+    @include phones {
+    transform: translate(50%, 70%);
+    font-size: 45px;
     }
 
 }
@@ -39,17 +38,14 @@
 .menu__item{
     display: flex;
     flex-direction: row;
-    &:hover .menu__desc {
+    position: relative;
+    &.active  .menu__desc {
         display: block;
     }
 }
-.menu__sutitle {
-    display: block;
-    position: relative;
 
-}
 @each $menu in (meet, veget, diet) {
-    .menu__sutitle-#{$menu} {
+    .menu__subitle-#{$menu} {
         background: url("../img/content/#{$menu}.jpg") center center no-repeat;
         background-size: cover;     
         width: rem(78px);
@@ -82,14 +78,16 @@
 } 
 .menu__desc {
     display: none;
-    width: rem(540px);
-    background: #141414;
-    filter: opacity(93%);
+    max-width: rem(540px);
+    background-color: rgb(47, 50, 52);
+    opacity: 0.929;
 } 
 .menu__text {
     @include ubuntu();
-    font-size: rem(14px);
+    font-size: 14px;
     color: white;
-    padding: rem(30px) rem(60px);
+    padding: rem(50px) rem(30px);
+    line-height: 24px;
+    margin: 0;
 }
-  
+
