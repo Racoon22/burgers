@@ -2,8 +2,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url("../img/bg/8_slide_bg.jpg") center center no-repeat;
+    // background: url("../img/bg/8_slide_bg.jpg") center center no-repeat;
     background-size: cover;
+}
+.map {
+    flex: 1;
+    width: 100%;
+    height: 100%;
 }
 .footer {
     display: flex;

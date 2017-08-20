@@ -481,7 +481,7 @@
                     </div>
             </section>
             <section class="section contacts">
-                <div class="contatcs__map"></div>
+                <div id="map" class="map"></div>
                 <footer class="footer">
                     <div class="footer__container ">
                         <div class="footer__contact">
@@ -570,7 +570,37 @@
                 <li class="fullscreen-menu__item"><a href="" class="fullscreen-menu__link">Контакты</a></li>
             </ul>
         </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcPIZ5xAqSsOvWa1CH1qUKN52HfN2ODo4&callback=initMap" async
+            defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 55.012185, lng: 82.931755 },
+                    zoom: 12
+                });
+                var icons = '/img/icons/map-marker.svg';
+
+
+                var features = [
+                    { title: 'Perfect burgers', location: { lat: 55.009995, lng: 82.934605 } },
+                    { title: 'Perfect burgers', location: { lat: 55.036211, lng: 82.917719 } },
+                    { title: 'Perfect burgers', location: { lat: 54.983896, lng: 82.896924 } }]
+
+                features.forEach(function (feature) {
+                    var marker = new google.maps.Marker({
+                        position: feature.location,
+                        title: feature.title,
+                        icon: icons,
+                        map: map
+                    });
+                });
+                map.setOptions({ draggable: false, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true });
+            };
+        </script>
 </body>
 
 </html>
