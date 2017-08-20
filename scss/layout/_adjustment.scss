@@ -2,13 +2,23 @@
 
   width: 100%;
   position: relative;
-  min-height: 100%;
+  // min-height: 100%;
   overflow: hidden;
+  height: 100%;
 }
 
 .maincontent {
   height: 100%;
-  // min-height: rem(650px);
+  min-height: 650px;
+  transition: transform;
+  will-change: transform;
+  -webkit-transition-duration: 1s; 
+  transition-duration: 1s;
+         @include tablets {
+  min-height: 1025px;
+}       @include phones {
+   min-height: 800px;
+    }
 }
 
 .container {
@@ -32,13 +42,12 @@
 .section {
 
   min-height: 650px;
-  height: 100vh;
+  height: 100%;
        @include tablets {
   min-height: 1025px;
 }       @include phones {
    min-height: 800px;
     }
-
 }
 
 .order-link {

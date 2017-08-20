@@ -70,7 +70,7 @@
 .accordion__item {
     margin-bottom: rem(20px);
 }
-.active .accordion__container{
+.accordion__item.active .accordion__container{
     display: flex;
     padding-top: rem(10px);
     padding-left: rem(15px);
@@ -87,10 +87,10 @@
     text-decoration: none;
     color: white;
 }
-.active .accordion__link {
+.accordion__item.active .accordion__link {
     color: $yellow;
 }
-.active .accordion__title:before {
+.accordion__item.active .accordion__title:before {
     transform: rotate(180deg);
 }
 .accordion__title {

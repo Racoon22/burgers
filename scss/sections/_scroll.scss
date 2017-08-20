@@ -28,6 +28,6 @@
     left: -80%;
     top: -80%;
 }
-.scrol-nav__link:hover:before {
+.scrol-nav__item.active .scrol-nav__link:before {
     display: block;
 }

@@ -53,6 +53,9 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body, html {
+  height: 100%; }
+
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
   width: 0.0625rem;
@@ -74,11 +77,27 @@ ul {
 .wrapper {
   width: 100%;
   position: relative;
-  min-height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
 
 .maincontent {
-  height: 100%; }
+  height: 100%;
+  min-height: 650px;
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  -o-transition: transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
+  will-change: transform;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s; }
+  @media screen and (max-width: 768px) {
+    .maincontent {
+      min-height: 1025px; } }
+  @media screen and (max-width: 480px) {
+    .maincontent {
+      min-height: 800px; } }
 
 .container {
   height: 100%;
@@ -111,7 +130,7 @@ ul {
 
 .section {
   min-height: 650px;
-  height: 100vh; }
+  height: 100%; }
   @media screen and (max-width: 768px) {
     .section {
       min-height: 1025px; } }
@@ -867,7 +886,7 @@ ul {
 .accordion__item {
   margin-bottom: 1.25rem; }
 
-.active .accordion__container {
+.accordion__item.active .accordion__container {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -876,7 +895,7 @@ ul {
   padding-left: 0.9375rem;
   margin-bottom: 2.1875rem; }
   @media screen and (max-width: 768px) {
-    .active .accordion__container {
+    .accordion__item.active .accordion__container {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
@@ -894,10 +913,10 @@ ul {
   text-decoration: none;
   color: white; }
 
-.active .accordion__link {
+.accordion__item.active .accordion__link {
   color: #f9b43b; }
 
-.active .accordion__title:before {
+.accordion__item.active .accordion__title:before {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
@@ -1619,7 +1638,7 @@ ul {
   left: -80%;
   top: -80%; }
 
-.scrol-nav__link:hover:before {
+.scrol-nav__item.active .scrol-nav__link:before {
   display: block; }
 
 .icon-arrow-scroll {
