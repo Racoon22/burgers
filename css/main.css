@@ -77,7 +77,6 @@ ul {
 .wrapper {
   width: 100%;
   position: relative;
-  overflow: hidden;
   height: 100%; }
 
 .maincontent {
@@ -156,6 +155,8 @@ ul {
   cursor: pointer; }
   .order-link:hover {
     background-color: #ce401a; }
+  .order-link:focus {
+    outline: none; }
 
 .hero {
   background: url("../img/bg/1_slide_bg.jpg") no-repeat;
@@ -480,6 +481,10 @@ ul {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: url("../img/bg/3_slide_bg.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
@@ -506,13 +511,17 @@ ul {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 940px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 960px;
   position: relative; }
   @media screen and (max-width: 480px) {
     .burgers__container {
       max-width: 480px; } }
 
-.arrow__burgers-left {
+.arrow__burgers-prev {
   position: absolute;
   top: 50%;
   left: -.625rem;
@@ -520,10 +529,10 @@ ul {
   -ms-transform: translate(-50%, 50%) rotate(90deg);
   transform: translate(-50%, 50%) rotate(90deg); }
   @media screen and (max-width: 480px) {
-    .arrow__burgers-left {
+    .arrow__burgers-prev {
       margin-right: -30px; } }
 
-.arrow__burgers-right {
+.arrow__burgers-next {
   position: absolute;
   top: 50%;
   right: -.625rem;
@@ -531,7 +540,7 @@ ul {
   -ms-transform: translate(100%, 50%) rotate(270deg);
   transform: translate(100%, 50%) rotate(270deg); }
   @media screen and (max-width: 480px) {
-    .arrow__burgers-right {
+    .arrow__burgers-next {
       margin-left: -30px; } }
 
 .burgers__content {
@@ -539,10 +548,12 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 960px;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
-  align-items: flex-start; }
+  align-items: flex-start;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .burgers__content {
       -webkit-box-orient: vertical;
@@ -566,8 +577,8 @@ ul {
       align-items: flex-start; } }
 
 .burgers__img {
-  max-width: 500px;
-  width: 100%; }
+  max-height: 320px;
+  max-width: 490px; }
   @media screen and (max-width: 480px) {
     .burgers__img {
       max-width: 500px;
@@ -769,6 +780,39 @@ ul {
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
+
+.burgers__list {
+  white-space: nowrap;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(0%, 5%);
+  -ms-transform: translate(0%, 5%);
+  transform: translate(0%, 5%); }
+
+.burgers__item {
+  white-space: normal;
+  display: inline-block;
+  max-height: 960px; }
+
+.burgers__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+  height: 500px; }
 
 .team {
   background: url("../img/bg/4_slide_bg.jpg") center center no-repeat;

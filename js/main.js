@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  var md = new MobileDetect(window.navigator.userAgent),
-    isMobile = md.mobile();
+    var md = new MobileDetect(window.navigator.userAgent),
+        isMobile = md.mobile();
 
     var scrollToSection = function (direction) {
         var section = defineSection(sections);
@@ -85,17 +85,17 @@ $(document).ready(function () {
 
     $('.wrapper').on({
         wheel: function (e) {
-        var deltaY = e.originalEvent.deltaY,
-            section = defineSection(sections);
+            var deltaY = e.originalEvent.deltaY,
+                section = defineSection(sections);
 
-        if (deltaY > 0 && section.nextSection.length) {
-            performTransition(section.nextSection.index());
-        }
-        if (deltaY < 0 && section.prevSection.length) {
-            performTransition(section.prevSection.index());
-        }
+            if (deltaY > 0 && section.nextSection.length) {
+                performTransition(section.nextSection.index());
+            }
+            if (deltaY < 0 && section.prevSection.length) {
+                performTransition(section.prevSection.index());
+            }
         },
-        
+
     });
 
     $('[data-scroll-to]').on('click', function (e) {
@@ -128,9 +128,6 @@ $(document).ready(function () {
         else if (e.keyCode == 40 && section.prevSection.length) {
             performTransition(section.prevSection.index());
         }
-
-
-
     });
 
     var defineSection = function (sections) {
@@ -148,6 +145,48 @@ $(document).ready(function () {
             }
         });
     }
-}
-)
+
+    var moveSlaide = function (container, slaiderNum) {
+
+        var items = container.find('.burgers__item'),
+            activeSlide = items.filter('.active'),
+            reqItem = items.eq(slaiderNum),
+            reqIndex = reqItem.index(),
+            list = container.find('.burgers__list'),
+            duration = 500;
+
+        if (reqItem)
+            list.animate({
+                'left': reqIndex * -100 + '%'
+            }, duration, function () {
+                activeSlide.removeClass('active'),
+                    reqItem.addClass('active')
+            })
+
+    }
+
+    $('.arrow__burgers').on('click', function (e) {
+        e.preventDefault();
+        var container = $(this).closest('.burgers__container'),
+            items = $('.burgers__item', container),
+            activeItem = items.filter('.active'),
+            exitedItem, 
+            edgeItem,
+            reqItem;
+
+
+        if ($(this).hasClass('arrow__burgers-next')) {
+            exitedItem = activeItem.next();
+            edgeItem = items.first();
+        }
+        if ($(this).hasClass('arrow__burgers-prev')) {
+            exitedItem = activeItem.prev();
+            edgeItem = items.last();
+        }
+        reqItem = exitedItem.length ? exitedItem.index() : edgeItem.index();
+
+        moveSlaide(container, reqItem);
+    }
+    )
+})
 

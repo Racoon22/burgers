@@ -3,7 +3,7 @@
   width: 100%;
   position: relative;
   // min-height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   height: 100%;
 }
 
@@ -67,4 +67,5 @@
   &:hover {
     background-color: darken($orange, 7%);
   }
+  &:focus { outline: none; }
 }
