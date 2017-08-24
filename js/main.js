@@ -153,8 +153,8 @@ $(document).ready(function () {
         var elem = $(e.target);
         sectionNum = parseInt(elem.attr('data-scroll-to'));
         performTransition(sectionNum);
-        if($('#fullscreen-menu').hasClass('fullscreen-menu')) {
-            $('#fullscreen-menu').removeClass('fullscreen-menu')
+        if($('#fullscreen-menu').hasClass('active-menu')) {
+            $('#fullscreen-menu').removeClass('active-menu')
         }
     });
 
