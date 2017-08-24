@@ -1,5 +1,32 @@
 $(document).ready(function () {
 
+
+    $(window).resize(function () {
+       
+        viewport = $(window).width();
+         if( viewport <= 940  ) {
+        var sliderItem = $('.burgers__content'),
+            sliderWraper = $('.burgers__wrapper')
+        sliderItem.css({
+            'width': viewport * 0.9,
+        })
+        sliderWraper.css({
+            'width': viewport * 0.9,
+        })
+         };
+        console.log("Handler for .resize() called");
+    });
+///////////////////////////////////////////////////////////////
+    
+    $('.header__menu-link').on('click', function (e) {
+        e.preventDefault()
+        var fullScreenMenu = $('#fullscreen-menu');
+        fullScreenMenu.addClass('active-menu');
+        console.log(fullScreenMenu);
+    })
+
+
+
     var md = new MobileDetect(window.navigator.userAgent),
         isMobile = md.mobile();
 
@@ -39,8 +66,6 @@ $(document).ready(function () {
         var item = $(e.target).closest('.accordion__item'),
             items = item.siblings('.accordion__item'),
             itemHeight = item.outerHeight();
-        console.log(item);
-        item.prepend(item);
 
         if (!item.hasClass("active")) {
             items.removeClass('active');
@@ -53,8 +78,8 @@ $(document).ready(function () {
         e.preventDefault()
         var item = $(e.target).closest('.menu__item'),
             items = item.siblings('.menu__item'),
-            viewport = $(window).width();
 
+            viewport = $(window).width();
         if (viewport <= 500) {
             itemHeight = item.outerHeight();
             items.hide();
@@ -128,6 +153,9 @@ $(document).ready(function () {
         var elem = $(e.target);
         sectionNum = parseInt(elem.attr('data-scroll-to'));
         performTransition(sectionNum);
+        if($('#fullscreen-menu').hasClass('fullscreen-menu')) {
+            $('#fullscreen-menu').removeClass('fullscreen-menu')
+        }
     });
 
     $('.wrapper').on('swipe', function (e) {

@@ -26,13 +26,15 @@
     max-width: 960px;
     position: relative;
            @include phones {
+    flex-direction: column;
+    justify-content: flex-start;
     max-width: 480px;
     }
 }
 .arrow__burgers-prev {
     position: absolute;
     top: 50%;
-    left: -.625rem;
+    left: 1%;;
     transform: translate(-50%, 50%) rotate(90deg);
     @include phones {
    margin-right: -30px;
@@ -41,7 +43,7 @@
 .arrow__burgers-next {
     position: absolute;
     top: 50%;
-    right: -.625rem;
+    right: 1%;
     transform: translate(100%, 50%) rotate(270deg);
                @include phones {
    margin-left: -30px;
@@ -49,20 +51,19 @@
 
 } 
 .burgers__img {
-    max-height: 320px;
-    width: 490px;
+
+    width: 100%;
            @include phones {
 
-    width: 376px;
-    height: 376px;
-}
+  }
 }
 .burgers__column-left {
     text-align: center;
     position: relative;
     padding: 80px 0;
+     width: 50%;
     @include tablets {
-      width: 480px;
+      width: 80%;
     padding: 80px 0 0 0;
     }
     @include phones {
@@ -161,9 +162,10 @@
 
     display: flex;
     flex-direction: column;
+    width: 50%;
     @include tablets {
     align-items: center;
-    width: 480px;
+    width: 80%;
     }
        @include phones {
    max-width: 460px;
@@ -235,6 +237,7 @@
 }
 
 .burgers__list {
+    display: inline-flex;
     white-space: nowrap;
     font-size: 0;
     position: absolute;
@@ -253,7 +256,7 @@
     overflow: hidden;
     position: relative;
     width: 940px;
-    height: 500px;
+    height: 600px;
             @include tablets {
     justify-content: flex-start;
     width: 728px;
