@@ -1,0 +1,62 @@
+.review-modal{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+
+}
+.review-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2f3234;
+    z-index: 201;
+    opacity: 0.9;
+}
+.review-container{
+    position: relative;
+    max-width: 475px;
+    min-height: 255px;
+    border-radius: 10px;
+    z-index: 500;
+    background-color: #fff;
+    padding: 25px 20px;
+    @include tablets {
+     width: 460px;
+}    
+
+}
+.fullscreen-menu__item {
+    margin-bottom: 60px;
+}
+.fullscreen-menu__item:first-child .fullscreen-menu__link:before {
+    display: none;
+    }
+.close-btn{
+    background: url("../img/icons/close-btn-grey.png") no-repeat;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    cursor: pointer;
+
+}
+.active-reviews{
+    display: flex;
+}
+.reviews__title--modal {
+    color: black;
+  
+}
+.reviews__text--modal {
+    color: black;
+    display: block;
+   }
+.close-btn-red {
+    background: url("../img/icons/close-btn-red.png") no-repeat;
+}

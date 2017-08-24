@@ -46,38 +46,28 @@
                @include phones {
    margin-left: -30px;
     }
-}
-.burgers__content {
-    display: flex;
-    width: 960px;
-    align-items: flex-start;
-      overflow: hidden;
-             @include tablets {
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-     }
-             @include phones {
-    align-items: flex-start;
-    }
+
 } 
 .burgers__img {
     max-height: 320px;
-    max-width: 490px;
+    width: 490px;
            @include phones {
-    max-width: 500px;
-    width: 100%;
+
+    width: 376px;
+    height: 376px;
 }
 }
 .burgers__column-left {
+    text-align: center;
     position: relative;
     padding: 80px 0;
     @include tablets {
+      width: 480px;
     padding: 80px 0 0 0;
     }
     @include phones {
     width: 100%;
-    max-width: 480px;
+    max-width: 460px;
     text-align: center;
     padding: 110px 0 0 0;
     }
@@ -98,6 +88,7 @@
     background-color: white;
     opacity: 0.902;
     padding: 20px;
+    font-size: 16px;
 }
 .burgers__product-name {
      @include ubuntu(bold);
@@ -172,9 +163,10 @@
     flex-direction: column;
     @include tablets {
     align-items: center;
+    width: 480px;
     }
        @include phones {
-   max-width: 480px;
+   max-width: 460px;
     }
     
 
@@ -215,7 +207,7 @@
     margin-bottom: 20px;
           }
          @include phones {
-     max-width: 460px;
+     max-width: 440px;
       margin-bottom: 0;
     }
 }
@@ -254,14 +246,41 @@
     white-space: normal;
     display: inline-block;
     max-height: 960px;
+    
    
 }
 .burgers__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     position: relative;
-    width: 960px;
+    width: 940px;
     height: 500px;
+            @include tablets {
+    justify-content: flex-start;
+    width: 728px;
+    height: 1000px;
+    }
+       @include phones {
+            max-width: 460px;
+    height: 800px;
+    font-size: 50px;
+    }
+
+.burgers__content {
+    display: flex;
+    flex-direction: row; 
+    overflow: hidden;
+    width: 940px;
+    height: 500px;
+            @include tablets {
+                 flex-direction: column;
+                 align-items: center;
+    width: 700px;
+    height: 1000px;
+    }
+             @include phones {
+    align-items: flex-start;
+    max-width: 440px;
+    height: 800px;
+    }
+} 
 }
