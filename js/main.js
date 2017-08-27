@@ -1,23 +1,38 @@
 $(document).ready(function () {
 
+    viewport = $(window).width();
 
-    $(window).resize(function () {
-       
-        viewport = $(window).width();
-         if( viewport <= 940  ) {
-        var sliderItem = $('.burgers__content'),
-            sliderWraper = $('.burgers__wrapper')
-        sliderItem.css({
-            'width': viewport * 0.9,
-        })
-        sliderWraper.css({
-            'width': viewport * 0.9,
-        })
-         };
+    function slaiderWith(viewport) {
+        if (viewport < 480) {
+            $('.burgers__content').css({
+                'width': viewport * 0.9,
+            })
+            $('.burgers__wrapper').css({
+                'width': viewport * 0.9,
+            })
+        }
+    }
+
+    slaiderWith(viewport);
+
+
+    $(window).resize(function (viewport) {
+
+
+        if (viewport <= 940) {
+            var sliderItem = $('.burgers__content'),
+                sliderWraper = $('.burgers__wrapper')
+            sliderItem.css({
+                'width': viewport * 0.9,
+            })
+            sliderWraper.css({
+                'width': viewport * 0.9,
+            })
+        };
         console.log("Handler for .resize() called");
     });
-///////////////////////////////////////////////////////////////
-    
+    ///////////////////////////////////////////////////////////////
+
     $('.header__menu-link').on('click', function (e) {
         e.preventDefault()
         var fullScreenMenu = $('#fullscreen-menu');
@@ -153,7 +168,7 @@ $(document).ready(function () {
         var elem = $(e.target);
         sectionNum = parseInt(elem.attr('data-scroll-to'));
         performTransition(sectionNum);
-        if($('#fullscreen-menu').hasClass('active-menu')) {
+        if ($('#fullscreen-menu').hasClass('active-menu')) {
             $('#fullscreen-menu').removeClass('active-menu')
         }
     });
@@ -173,7 +188,6 @@ $(document).ready(function () {
     });
 
     $(document).on('keydown', function (e) {
-        e.preventDefault();
         section = defineSection(sections);
         if (e.keyCode == 38 && section.nextSection.length) {
             performTransition(section.nextSection.index());
@@ -257,6 +271,11 @@ $(document).ready(function () {
     }
 
     )
+
+    $('.submit').on('click', function (e) {
+        e.preventDefault();
+
+    });
 
 })
 
