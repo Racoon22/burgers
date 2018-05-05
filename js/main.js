@@ -28,7 +28,8 @@ $(document).ready(function () {
             sliderWraper.css({
                 'width': viewport * 0.9,
             })
-        };
+        }
+        ;
         console.log("Handler for .resize() called");
     });
     ///////////////////////////////////////////////////////////////
@@ -39,7 +40,6 @@ $(document).ready(function () {
         fullScreenMenu.addClass('active-menu');
         console.log(fullScreenMenu);
     })
-
 
 
     var md = new MobileDetect(window.navigator.userAgent),
@@ -58,22 +58,21 @@ $(document).ready(function () {
     }
 
 
-
     $('.close-btn').on('click', function (e) {
-        e.preventDefault()
-        if ($(this).hasClass('close-btn-red')) {
+            e.preventDefault()
+            if ($(this).hasClass('close-btn-red')) {
 
-            fullRewies = $('#review-modal');
+                fullRewies = $('#review-modal');
 
-            fullRewies.find('.reviews__title--modal').empty();
-            fullRewies.find('.reviews__text--modal').empty();
-            fullRewies.addClass('active-reviews');
-            $(this).closest('.review-modal').removeClass('active-reviews');
-        } else {
-            var fullScreenMenu = $('#fullscreen-menu');
-            fullScreenMenu.removeClass('active-menu');
+                fullRewies.find('.reviews__title--modal').empty();
+                fullRewies.find('.reviews__text--modal').empty();
+                fullRewies.addClass('active-reviews');
+                $(this).closest('.review-modal').removeClass('active-reviews');
+            } else {
+                var fullScreenMenu = $('#fullscreen-menu');
+                fullScreenMenu.removeClass('active-menu');
+            }
         }
-    }
     )
 
     $('.accordion__link').on('click', function (e) {
@@ -117,13 +116,9 @@ $(document).ready(function () {
         }
 
 
-
-
-
-
     });
     var sections = $('.section'),
-        display = $('.maincontent')
+        display = $('.maincontent');
     isscroll = false;
 
     var performTransition = function (section) {
@@ -144,7 +139,7 @@ $(document).ready(function () {
             isscroll = false;
             $('.scrol-nav__item').eq(section).addClass('active')
                 .siblings().removeClass('active');
-        }, 1300);
+        }, 1000);
     }
 
 
@@ -232,50 +227,57 @@ $(document).ready(function () {
 
     }
 
-    $('.arrow__burgers').on('click', function (e) {
+
+    $('.arrow__link').on('click', function (e) {
         e.preventDefault();
-        var container = $(this).closest('.burgers__container'),
-            items = $('.burgers__item', container),
-            activeItem = items.filter('.active'),
-            exitedItem,
-            edgeItem,
-            reqItem;
+        section = defineSection(sections);
+        performTransition(section.nextSection.index());
+
+    });
 
 
-        if ($(this).hasClass('arrow__burgers-next')) {
-            exitedItem = activeItem.next();
-            edgeItem = items.first();
+    $('.arrow__burgers').on('click', function (e) {
+            e.preventDefault();
+            var container = $(this).closest('.burgers__container'),
+                items = $('.burgers__item', container),
+                activeItem = items.filter('.active'),
+                exitedItem,
+                edgeItem,
+                reqItem;
+
+
+            if ($(this).hasClass('arrow__burgers-next')) {
+                exitedItem = activeItem.next();
+                edgeItem = items.first();
+            }
+            if ($(this).hasClass('arrow__burgers-prev')) {
+                exitedItem = activeItem.prev();
+                edgeItem = items.last();
+            }
+            reqItem = exitedItem.length ? exitedItem.index() : edgeItem.index();
+
+            moveSlaide(container, reqItem);
         }
-        if ($(this).hasClass('arrow__burgers-prev')) {
-            exitedItem = activeItem.prev();
-            edgeItem = items.last();
-        }
-        reqItem = exitedItem.length ? exitedItem.index() : edgeItem.index();
-
-        moveSlaide(container, reqItem);
-    }
     )
 
     $('.reviews__button').on('click', function (e) {
-        e.preventDefault();
+            e.preventDefault();
 
-        var rewiesItem = $(this).closest('.reviews__content'),
-            rewiesTitle = rewiesItem.find('.reviews__title').text(),
-            rewiesText = rewiesItem.find('.reviews__text').text(),
-            fullRewies = $('#review-modal');
-        fullRewies.find('.reviews__title--modal').append(rewiesTitle);
-        fullRewies.find('.reviews__text--modal').append(rewiesText);
-        fullRewies.addClass('active-reviews');
-        console.log(fullRewies);
+            var rewiesItem = $(this).closest('.reviews__content'),
+                rewiesTitle = rewiesItem.find('.reviews__title').text(),
+                rewiesText = rewiesItem.find('.reviews__text').text(),
+                fullRewies = $('#review-modal');
+            fullRewies.find('.reviews__title--modal').append(rewiesTitle);
+            fullRewies.find('.reviews__text--modal').append(rewiesText);
+            fullRewies.addClass('active-reviews');
+            console.log(fullRewies);
 
-    }
-
+        }
     )
 
     $('.submit').on('click', function (e) {
         e.preventDefault();
 
     });
-
 })
 
